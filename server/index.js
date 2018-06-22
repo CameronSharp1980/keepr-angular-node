@@ -7,7 +7,7 @@ var dbConnect = require('./config/mlab/mlab-config')
 var session = require('./authentication/sessions')
 var Auth = require('./authentication/auth')
 
-//declare routes
+// declare routes
 var vaultRoutes = require('./routes/vault-routes')
 var keepRoutes = require('./routes/keep-routes')
 //
