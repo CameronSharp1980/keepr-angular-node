@@ -1,8 +1,7 @@
 ## KeepR
 
 KeepR is a Pinterest clone and this specific implementation of 
-KeepR is for my online portfolio showing my abilities with 
-Angular.
+KeepR is for my online portfolio showing my growing abilities with Angular.
 
 # Www
 
