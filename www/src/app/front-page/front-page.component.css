@@ -1,0 +1,31 @@
+.top-menu {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid gray;
+}
+
+.top-menu-entry {
+    margin: 5px;
+    outline: 1px solid black;
+}
+
+.top-menu-home-thumbnail {
+    flex-basis: 25px;
+    height: 25px;
+}
+
+.top-menu-home-thumbnail img{
+    width: 100%;
+}
+
+.top-menu-search-bar {
+    flex-grow: 1;
+}
+
+/* Temporary rules */
+
+.inlineDiv {
+    display: inline;
+}
