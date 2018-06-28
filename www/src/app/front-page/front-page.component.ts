@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { keepService } from '../shared/keep/keep.service';
 
 @Component({
   selector: 'keepr-front-page',
@@ -7,42 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontPageComponent implements OnInit {
   //setup service to pull in from database and replace mock data
-  mockData: any[] = [
-    {
-      title: "Title 1",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis dapibus mi nec sagittis. Nulla ullamcorper metus eget placerat luctus. Nullam pulvinar est at est lacinia bibendum. Curabitur feugiat felis.",
-      imageUrl: "//placehold.it/100x100",
-      tags: "1, 2, 3, 4, 5"
-    },
-    {
-      title: "Title 2",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis dapibus mi nec sagittis. Nulla ullamcorper metus eget placerat luctus. Nullam pulvinar est at est lacinia bibendum. Curabitur feugiat felis.",
-      imageUrl: "//placehold.it/200x200",
-      tags: "1, 2, 3, 4, 5"
-    },
-    {
-      title: "Title 3",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis dapibus mi nec sagittis. Nulla ullamcorper metus eget placerat luctus. Nullam pulvinar est at est lacinia bibendum. Curabitur feugiat felis.",
-      imageUrl: "//placehold.it/300x300",
-      tags: "1, 2, 3, 4, 5"
-    },
-    {
-      title: "Title 4",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis dapibus mi nec sagittis. Nulla ullamcorper metus eget placerat luctus. Nullam pulvinar est at est lacinia bibendum. Curabitur feugiat felis.",
-      imageUrl: "//placehold.it/400x400",
-      tags: "1, 2, 3, 4, 5"
-    },
-    {
-      title: "Title 5",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis dapibus mi nec sagittis. Nulla ullamcorper metus eget placerat luctus. Nullam pulvinar est at est lacinia bibendum. Curabitur feugiat felis.",
-      imageUrl: "//placehold.it/500x500",
-      tags: "1, 2, 3, 4, 5"
-    }
-  ]
+  mockData: any[];
 
-  constructor() { }
+  constructor(private _keepService: keepService) { }
 
   ngOnInit() {
+    this.mockData = this._keepService.getKeeps();
+    //Add code for initializing the initial state of search results here after getting all keeps
   }
 
 }
