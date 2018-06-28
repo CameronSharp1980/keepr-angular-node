@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FrontPageModule } from './front-page/front-page.module';
@@ -10,7 +11,8 @@ import { FrontPageModule } from './front-page/front-page.module';
   ],
   imports: [
     BrowserModule,
-    FrontPageModule
+    FrontPageModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

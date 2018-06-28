@@ -9,13 +9,17 @@ import { Ikeep } from '../shared/keep/keep';
 })
 export class FrontPageComponent implements OnInit {
   //setup service to pull in from database and replace mock data
-  mockData: Ikeep[];
+  allKeeps: Ikeep[];
+  errorMessage: string;
 
   constructor(private _keepService: keepService) { }
 
   ngOnInit() {
-    this.mockData = this._keepService.getKeeps();
-    //Add code for initializing the initial state of search results here after getting all keeps
+    this._keepService.getKeeps().subscribe(keeps => {
+      this.allKeeps = keeps
+      //Add code for initializing the initial state of search results here after getting all keeps
+    },
+      error => this.errorMessage = <any>error);
   }
 
 }
