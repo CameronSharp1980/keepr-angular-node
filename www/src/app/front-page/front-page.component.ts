@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { keepService } from '../shared/keep/keep.service';
+import { Ikeep } from '../shared/keep/keep';
 
 @Component({
   selector: 'keepr-front-page',
@@ -8,7 +9,7 @@ import { keepService } from '../shared/keep/keep.service';
 })
 export class FrontPageComponent implements OnInit {
   //setup service to pull in from database and replace mock data
-  mockData: any[];
+  mockData: Ikeep[];
 
   constructor(private _keepService: keepService) { }
 

@@ -1,9 +1,10 @@
 import { Injectable } from "@angular/core";
+import { Ikeep } from "./keep";
 
 @Injectable()
 export class keepService {
 
-    getKeeps(): any[] {
+    getKeeps(): Ikeep[] {
         return [
             {
                 title: "Title 1",
